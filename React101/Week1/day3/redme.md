@@ -9,7 +9,7 @@ https://www.notion.so/RCT101-B23-D3-State-Management-836064b2b3524bc6a192691b9ab
 ### **Adding state to a component**
 
 Call useState at the top level of your component to declare one or more state variables.
-12345
+123456
 ```
 import { useState } from 'react';
 
