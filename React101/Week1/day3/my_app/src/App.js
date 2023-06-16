@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
      <h1>Start React App</h1>
-     <p>5</p>
+     <p>6</p>
     </div>
   );
 }
