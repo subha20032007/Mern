@@ -23,6 +23,11 @@ function Addtodo({handelAdd}){
  
   )
 }
+function TodoItem({key,titel,status}){
+  return(
+    <div key={key}>{titel} - {status ? "Completed" : "Not Completed"}</div>
+  )
+}
 function App() {
  
   const [todo,setTodo]=useState([])
@@ -40,14 +45,18 @@ function App() {
     console.log(el.status)
   }
   return (
-    //1
+    
   <div className="App">
      <h1>TODO APP</h1>
      <Addtodo handelAdd={handelAdd}/>
     
     {todo.map((el,i)=>(
 
-       <div onClick={handelToggle(el)}key={i}>{el.titel} - {el.status ? "Completed" : "Not Completed"}</div>
+      <TodoItem
+        key={i}
+        titel={el.titel}
+        status={el.status}
+      />
     ))}
 
 </div>
