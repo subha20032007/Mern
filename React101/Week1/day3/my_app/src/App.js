@@ -40,7 +40,7 @@ function App() {
     console.log(el.status)
   }
   return (
-    //12345678910111213141516171819202122
+    //1
   <div className="App">
      <h1>TODO APP</h1>
      <Addtodo handelAdd={handelAdd}/>
