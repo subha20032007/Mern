@@ -3,7 +3,7 @@ import { AddTodo } from './Components/AddTodo';
 import { useState } from 'react';
 export function Todo(){
     const [todo,setTodo]=useState([])
- //12
+ //123
   const handelAdd=(text)=>{
        let newItem={
         title:text,
