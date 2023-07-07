@@ -1,23 +1,21 @@
 import {useState} from "react"
 
-export function AddTodo({handelAdd}){
-    const [text,setText]=useState("")
-    const handelChange=(e)=>{
-      setText(e.target.value)
   
-    }
-    const handelClick=()=>{
-    handelAdd(text)
-    setText("")
-    }
-    return (
-      <>
-   
-    <input value={text} type="test" onChange={handelChange}/>
-    <button onClick={handelClick}>ADD</button>
-  
-  
-      </>
-   
-    )
+ const AddTodo=({handelAdd})=>{
+  let [text,setText]=useState("")
+  const handelClick=()=>{
+handelAdd(text)
+setText("")
   }
+  return(
+    <>
+<input
+value={text}
+onChange={(e)=>setText(e.target.value)}
+placeholder='Add Your Plan'
+/>
+<button onClick={handelClick}>AddTodo</button>
+</>
+  )
+}
+export default AddTodo

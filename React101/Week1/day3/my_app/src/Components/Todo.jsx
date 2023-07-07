@@ -1,33 +1,41 @@
-import { TodoItem } from './Components/TodoItem';
-import { AddTodo } from './Components/AddTodo';
+import TodoItem from './TodoItem';
+import AddTodo from './AddTodo';
 import { useState } from 'react';
+
+
 export function Todo(){
-    const [todo,setTodo]=useState([])
+    const [todos,setTodo]=useState([])
 //1
   const handelAdd=(text)=>{
        let newItem={
+        id:Math.random()+Math.random(),
         title:text,
         status:false
        }
-       const addItem=[...todo,newItem]
+       const addItem=[...todos,newItem]
        setTodo(addItem)
     
   }
-//   const handelToggle =(el)=>{
-//     console.log(el.status)
-//   }
+const handelToggle=(id)=>{
+   const toggleId=id
+  const AfterUpdateTodo= todos.map((todo)=>
+    toggleId===todo.id?{...todo,status:!todo.status}:todo
+   )
+setTodo(AfterUpdateTodo)
+}
   return (
    <>
 
    
      <AddTodo handelAdd={handelAdd}/>
     
-    {todo.map((el,i)=>(
-
+    {todos.map((el,i)=>(
+     
       <TodoItem
-        key={i}
+      id={el.id}
         title={el.title}
         status={el.status}
+        handelToggle={handelToggle}
       />
 
     ))}
