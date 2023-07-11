@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+</body>
+</html>
+<script>
+let h1 =document.getElementById("h1")
+let todos=[
+    {titel:"play",status:false,id:1},
+    {titel:"run",status:false,id:2},
+    {titel:"type",status:false,id:3},
+    {titel:"art",status:false,id:4}
+]
+let toggleId=2
+let AfterUpdate=todos.map((todo)=>{
+    return todo.id==toggleId?{...todo,status:!todo.status}:todo
+})
+console.log(AfterUpdate)
+    </script>

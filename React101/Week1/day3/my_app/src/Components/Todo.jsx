@@ -4,24 +4,36 @@ import { useState } from 'react';
 
 
 export function Todo(){
-    const [todos,setTodo]=useState([])
-//1
+    const [Todos,setTodo]=useState([])
+//
+
   const handelAdd=(text)=>{
        let newItem={
-        id:Math.random()+Math.random(),
+        id:Date.now()+Math.random()+text,
         title:text,
         status:false
        }
-       const addItem=[...todos,newItem]
+       const addItem=[...Todos,newItem]
        setTodo(addItem)
+   //    console.log(newItem)
     
   }
 const handelToggle=(id)=>{
    const toggleId=id
-  const AfterUpdateTodo= todos.map((todo)=>
+  const AfterUpdateTodo= Todos.map((todo)=>
     toggleId===todo.id?{...todo,status:!todo.status}:todo
    )
+  //  console.log(toggleId)
+  //  console.log(AfterUpdateTodo)
 setTodo(AfterUpdateTodo)
+}
+const handelDelete=(id)=>{
+  const DeleteId=id
+  const AfterDeleteTodo=Todos.filter((todo)=>
+  DeleteId!==todo.id
+  )
+  // console.log( AfterDeleteTodo)
+  setTodo(AfterDeleteTodo)
 }
   return (
    <>
@@ -29,13 +41,14 @@ setTodo(AfterUpdateTodo)
    
      <AddTodo handelAdd={handelAdd}/>
     
-    {todos.map((el,i)=>(
+    {Todos.map((todo)=>(
      
       <TodoItem
-      id={el.id}
-        title={el.title}
-        status={el.status}
-        handelToggle={handelToggle}
+      id={todo.id}
+        title={todo.title}
+        status={todo.status}
+       handelToggle={handelToggle}
+       handelDelete={handelDelete}
       />
 
     ))}

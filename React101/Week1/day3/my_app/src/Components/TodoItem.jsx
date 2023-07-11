@@ -1,8 +1,10 @@
- const TodoItem=({key,title,status,handelToggle})=>{
+ const TodoItem=({id,title,status,handelToggle,handelDelete})=>{
+  //console.dir(id+"*")
     return(
       <>
-      <div key={key}>{title} - {status ? "Completed" : "Not Completed"}</div>
-      <button onClick={handelToggle(key)}>Toggle</button>
+      <div key={id}>{title} - {status ? "Completed" : "Not Completed"}</div>
+      <button onClick={()=>handelToggle(id)}>Toggle</button>
+      <button onClick={()=>handelDelete(id)}>Delete</button>
 </>
     )
   }
