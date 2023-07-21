@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {Post} from './Component/Post';
 
 function App() {
   return (
     <div className="App">
-     123456789102345678
+    <h1 className='heading'>Post Item Api App</h1>
+   <Post/>
     </div>
   );
 }

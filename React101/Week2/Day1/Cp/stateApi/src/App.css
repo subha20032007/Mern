@@ -1,11 +1,6 @@
 .App {
   text-align: center;
 }
-.heading{
-  color: rgb(234,255,53);
- -webkit-text-stroke-width: 0.5px ;
- -webkit-text-stroke-color: rgb(21, 255, 0);
-}
 
 .App-logo {
   height: 40vmin;

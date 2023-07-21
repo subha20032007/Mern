@@ -1,0 +1,21 @@
+.Box{
+    border: 1px solid rebeccapurple;
+   
+    width:80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.Box>h1{
+color: rgb(0, 255, 179);
+-webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: black;
+}
+.Box>h6{
+color: rgb(69, 231, 4);
+
+}
+.btn{
+    margin:50px;
+    background: rgb(234,255,53);
+    background: linear-gradient(90deg, rgba(234,255,53,1) 0%, rgba(255,248,4,1) 38%, rgba(129,255,0,1) 59%, rgba(0,255,8,1) 100%);
+}
