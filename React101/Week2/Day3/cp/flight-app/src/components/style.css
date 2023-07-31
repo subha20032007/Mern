@@ -1,0 +1,77 @@
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .flight-table th,
+  .flight-table td {
+    border: 1px solid #007BFF;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .flight-table th {
+    background-color: #f2f2f2;
+    color:#007BFF;
+  }
+  
+  .flight-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .flight-table tr:hover {
+    background-color: #ddd;
+  }
+  /* FlightSearch.css */
+
+/* Container styles */
+.flight-search-container {
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  .flight-search-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF
+  }
+  
+  /* Input styles */
+  .flight-search-input {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Button styles */
+  .flight-search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* No Flights Found styles */
+  .no-flights-found {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f00;
+  }
+
+  @keyframes neon-glow {
+    0%, 100% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #007BFF, 0 0 70px #007BFF, 0 0 80px #007BFF, 0 0 100px #007BFF, 0 0 150px #007BFF;
+    }
+    50% {
+      text-shadow: none;
+    }
+  }
+  
+  .flight-search-button {
+    /* ... your existing button styles ... */
+  
+    /* Add the neon color effect */
+    animation: neon-glow 1s ease infinite;
+  }

@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import {Posts} from './Components/Post';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    123456
+    <Posts/>
     </div>
   );
 }
