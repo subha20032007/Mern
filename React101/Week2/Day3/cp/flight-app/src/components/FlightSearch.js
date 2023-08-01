@@ -42,7 +42,7 @@ console.dir(fData)
     console.log(a+"*")
     console.log(fData+"**")
   }
-  //seattle
+  //seattle//1
   //florida
   return (
     <div className="flight-search-container">
