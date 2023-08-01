@@ -72,6 +72,6 @@
   .flight-search-button {
     /* ... your existing button styles ... */
   
-    /* Add the neon color effect */
+    /* Add the neon color effect  1*/
     animation: neon-glow 1s ease infinite;
   }
