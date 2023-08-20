@@ -1,0 +1,16 @@
+.productCard{
+    height: auto;
+    width:250px;
+    border:1px solid rebeccapurple
+}
+.img{
+    height: 120px;
+    width: 100px;
+    margin:auto;
+    padding: 20px;
+    /* border:2px solid rgb(230, 207, 4) */
+}
+
+h6,h4{
+    color: rgb(98, 0, 255);
+}

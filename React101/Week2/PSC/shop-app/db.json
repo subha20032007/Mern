@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "title": "Bluetooth Speaker",
+      "price": "310",
+      "imgUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 1
+    },
+    {
+      "title": "BAg",
+      "price": "20",
+      "imgUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 2
+    },
+    {
+      "title": "It Product for Create",
+      "price": "20",
+      "imgUrl": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "id": 3
+    },
+    {
+      "title": "Note Book",
+      "price": "40",
+      "imgUrl": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "id": 4
+    },
+    {
+      "title": "Shirt",
+      "price": "299",
+      "imgUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 5
+    },
+    {
+      "title": "Photo fame",
+      "price": "322",
+      "imgUrl": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "id": 6
+    },
+    {
+      "title": "ADada",
+      "price": "3",
+      "imgUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 7
+    },
+    {
+      "title": "addad",
+      "price": "4",
+      "imgUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 8
+    },
+    {
+      "title": "Photo fame",
+      "price": "321",
+      "imgUrl": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "id": 9
+    },
+    {
+      "title": "Baskin Robeins",
+      "price": "200",
+      "imgUrl": "https://images.pexels.com/photos/380954/pexels-photo-380954.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 10
+    },
+    {
+      "title": "Lenovo Laptop",
+      "price": "30000",
+      "imgUrl": "https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 11
+    },
+    {
+      "title": "Apple Laptop",
+      "price": "32",
+      "imgUrl": "https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=600",
+      "id": 12
+    }
+  ]
+}
