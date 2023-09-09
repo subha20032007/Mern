@@ -25,10 +25,20 @@ export const Product =()=> {
  const [searchParams,setSearchParams]=useSearchParams()
  const [page,setPage]=useState(getNumber(searchParams.get("page"))||1)
  const [totalPage,setTotalPage]=useState(0)
+ const [orderby,setOrderby]=useState("")
+  const [filterby,setFilterby]=useState("")
  const limit=2
-
+const sort="price"
   const fetchAndUpdateData=async(page)=>{
-  let  url= `http://localhost:3001/data?_page=${page}&_limit=${limit}`
+
+  let url;
+  if(orderby){
+    url=`http://localhost:3001/data?_page=${page}&_limit=${limit}&_sort=${sort}&_order=${orderby}`
+  }else if(filterby){
+    url=`http://localhost:3001/data?_page=${page}&_limit=${limit}&_sort=${sort}&_order=${orderby}&category=${filterby}`
+  } else{
+    url=`http://localhost:3001/data?_page=${page}&_limit=${limit}`
+  }
       try{
         setLoading(true)
          const {totalCount,data}=await getData(url)
@@ -52,16 +62,27 @@ setPage(pageData)
  }
 useEffect(()=>{
 fetchAndUpdateData(page)
-},[page])
+},[page,orderby,filterby])
 
 useEffect(()=>{
  
- setSearchParams({page:page})
+  let ParamObj={page,orderby,filterby}
+  if(orderby){
+  ParamObj.orderby=orderby
+  }
+  if(filterby){
+ParamObj.filterby=filterby
+  }
+ setSearchParams(ParamObj)
 
-  },[page])
+  },[page,orderby,filterby])
 //  console.log(searchParams.get("page"))
   return (
     <>{ loading?<div>  <h1>Loading....</h1></div>:isErr?<div> <h1>Something went Wrong please Refresh</h1></div>:<div>
+    <button onClick={()=>setOrderby('asc')}>Order By Price Aces</button>
+    <button onClick={()=>setOrderby('desc')}>Order By Price Desc</button>
+     <button onClick={()=>setFilterby('electronics')}>Filter By Price Electronics</button>
+    <button onClick={()=>setFilterby('jewelery')}>Filter By Price Jewelery</button>
     <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:""}} >
     {
 products?.map((el)=>(

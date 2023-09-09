@@ -8,11 +8,11 @@ export const AuthContextProvider=({children})=>{
 
     const login=(token)=>{
        setAuth(true)
-setToken(token)
+       setToken(token)
     }
     const logOut=()=>{
         setAuth(false)
-         setToken("")
+        setToken("")
     
 
      }
