@@ -24,6 +24,21 @@
       "id": 5,
       "title": "TypeScript",
       "status": false
+    },
+    {
+      "title": "React Cp",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "Redux ",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "App start",
+      "status": false,
+      "id": 8
     }
   ]
 }
